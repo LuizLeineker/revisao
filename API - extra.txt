@@ -1,0 +1,41 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 - Fazer tudo que está na API - basica
+
+AppDataContext:
+	using Microsoft.EntityFrameworkCore;
+
+	namespace API.Models;
+
+	public class AppDataContext : DbContext
+	{
+    		public DbSet<Tarefa> Tarefas { get; set; }       #(SE PRECISAR COLOCAR UM ? OU = null!;)
+    		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    		{
+        	optionsBuilder.UseSqlite("Data Source=app.db");
+    		}
+	}
+
+
+Models:
+	namespace API.Models;
+
+	public class Tarefa
+	{
+     		public int TerafaId {get; set;}
+    		public string? Nome {get; set;}
+     		public DateTime CriadoEm {get; set;}= DateTime.Now;
+	}
+
+
+Program - Basico
+	using API.Models;
+
+	var builder = WebApplication.CreateBuilder(args);
+	builder.Services.AddDbContext<AppDataContext>();
+	var app = builder.Build();
+
+	app.MapGet("/", () => "Hello World!");
+
+	app.Run();
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

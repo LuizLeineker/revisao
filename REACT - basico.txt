@@ -1,0 +1,11 @@
+1 criar react
+
+2 npm
+
+3 npm start
+
+4 axios - opcional
+
+
+
+5 - extra, não esquece tal coisa no final da pagina

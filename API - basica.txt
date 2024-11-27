@@ -1,0 +1,47 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			API
+1 - abrir o terminal em uma pasta especifica
+2 - criar a solução: dotnet new sln --output MySolution
+	entre na pasta da solução
+3 - criar o projeto: dotnet new web --name API
+4 - add project: dotnet sln add NomeDoProjeto  
+	testar se tem o solution explorer
+
+5 - RUN: dotnet run     (pasta do projeto)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			FILE
+6 - criar arquivo http
+	clicar new file e em custom file...
+	get url local 
+7 - extensions: rest client, material icon, sql viewer, cody: AI
+
+8 - INFOS
+criar Models manualmente, ele é para as tables, produtos, users... 
+	create class AppDataContext, remover using System de todas as class
+	quando for criar os file, crie com class, e no singular
+	public int TarefaId {get; set;}
+	public string? Nome {get; set;}
+	public DateTime CriadoEm {get; set;}= DateTime.Now;
+
+program: é o principal, aonde tem as funções...
+	get, update, return
+	builder.Services.AddDbContext<AppDataContext>();
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			BD
+9 - add pacotes: dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+    dotnet add package Microsoft.EntityFrameworkCore.Design
+	ambos add na pasta project
+
+10 - após criar o dbcontenxt e arrumar o codigo dele podemos usar o comando de migartions
+	dotnet ef migrations add InitialCreate
+
+11 - update no BD: dotnet ef database update
+	para mudar o nome do bd é la em datacontext, de app da para colocar outro nome
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			EXTRA
+ctx.SaveChanges(); === para cadastrar alterar e deletar (program.cs)
+na hora de deletar sempre deletar primeiro o que não está relacionado
+de preferencia alterou a api, roda dnvo
+
+RELACIONANENTO
