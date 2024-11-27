@@ -1,11 +1,25 @@
-1 criar react
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			REACT
+1 - criar react: npx create-react-app nome --template typescript
 
-2 npm
+2 - remover e limpar os arquivo! notion: https://careful-bite-81a.notion.site/React-Estrutura-B-sica-de-um-projeto-com-TypeScript-5398986490bd42c1ab24f238a6967b82
 
-3 npm start
+3 - npm i (não sei se é necessario)
 
-4 axios - opcional
+4 - axios (opcional): npm i axios @types/axios          react: npm install react-router-dom              npm install @types/react-router-dom
 
+5 - npm start
 
+6 - linkar api com react
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			EXTRA
+Criar manualmente components & models
 
-5 - extra, não esquece tal coisa no final da pagina
+components =  paginas react = terá as funçoes = cadastro = lista	-> FUÇÃO: LIST...		
+models = tabels = as info: produtos, clientes, grupo, tarefas, rotuloS  -> TABLES
+		      COMPONENTE 
+1 - Todo componente deve começar com a primeira letra CAPS.
+2 - Todo componente deve ser uma função.
+3 - Todo componente deve RETORNAR UM elemento HTML.
+4 - Todo componente deve ser exportado = export default App; 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
